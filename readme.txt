@@ -20,8 +20,13 @@ git reflog --查看历史命令
 
 git reset --hard head^ --恢复上一个版本
 git reset --hard commit_id --按版本号恢复版本
+git reset head file --从暂存区恢复到工作区
 
 git checkout -- file --文件保存了，恢复到没保存之前的状态
+
+rm file --删除工作区文件
+git rm file --删除版本库文件到暂存区，记住删除后要提交
+
 
 
 
