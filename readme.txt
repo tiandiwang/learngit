@@ -1,5 +1,28 @@
-Git is a version control system.
-Git is free software.
-这是我第一次学习git
-测试改动
-add GPL
+
+git config --global user.name "your name" --设置Git全局用户名
+git config --global user.email "your email" --设置Git全局邮箱
+
+mkdir working directory--创建工作区（文件夹）
+cd working directory --进入工作区
+pwd --查看工作区路径
+git init --创建版本库（.git文件夹）
+
+git add file --把文件加入到版本库的暂存区
+git commit -m "file comment" --把暂存区的文件提交到版本库
+
+git status --查看工作区当前情况
+git diff --查看工作区文件修改了什么
+git diff head -- file --查看文件工作区和版本库最新版本的区别
+
+git log --查看版本库当前状态
+git log --pretty=oneline --按行输出版本库当前状态
+git reflog --查看历史命令
+
+git reset --hard head^ --恢复上一个版本
+git reset --hard commit_id --按版本号恢复版本
+
+git checkout -- file --文件保存了，恢复到没保存之前的状态
+
+
+
+
