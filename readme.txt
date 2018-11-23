@@ -33,6 +33,13 @@ git remote add origin git@github.com:yourName/yourRepository.git --关联远程�
 git push -u origin master --向远程库推送最新版本，如果远程库有内容则不需要-u参数省略
 git clone git@github.com:yourName/yourRepository.git --从远程库克隆最新版本到本地工作区
 
+git branch --查看分支
+git branch branchname --创建分支
+git checkout branchname --切换分支
+git checkout -b branchname  --创建并切换分支加-b参数
+
+
+
 
 
 
