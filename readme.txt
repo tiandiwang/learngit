@@ -29,7 +29,9 @@ git rm file --删除版本库文件到暂存区，记住删除后要提交
 
 ssh-keygen -t rsa -C "youremail@example.com" --生成一个SSH keygen
 git remote add origin git@github.com:yourName/yourRepository.git --关联远程库
+
 git push -u origin master --向远程库推送最新版本，如果远程库有内容则不需要-u参数省略
+git clone git@github.com:yourName/yourRepository.git --从远程库克隆最新版本到本地工作区
 
 
 
