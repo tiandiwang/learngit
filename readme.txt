@@ -16,6 +16,7 @@ git diff head -- file --查看文件工作区和版本库最新版本的区别
 
 git log --查看版本库当前状态
 git log --pretty=oneline --按行输出版本库当前状态
+git log --graph --pretty=oneline --abbrev-commit --查看分支合并图
 git reflog --查看历史命令
 
 git reset --hard head^ --恢复上一个版本
@@ -40,8 +41,10 @@ git checkout -b branchname  --创建并切换分支加-b参数
 git merge branchname --把分支合并到master主分支上
 git branch -d branchname --删除分支
 
-create a new branch (quick and simple) or (quick & simple).
+在实际开发中，我们应该按照几个基本原则进行分支管理：
+1. master分支应该是非常稳定的，也就是仅用来发布新版本，平时不能在上面干活；
 
+1
 
 
 
