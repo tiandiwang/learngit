@@ -31,15 +31,15 @@ git rm file --删除版本库文件到暂存区，记住删除后要提交
 ssh-keygen -t rsa -C "youremail@example.com" --生成一个SSH keygen
 git remote add origin git@github.com:yourName/yourRepository.git --关联远程库
 
-git push -u origin branchname --向远程库推送最新版本，如果远程库有内容则不需要-u参数省略
+git push -u origin <branch_name> --向远程库推送最新版本，如果远程库有内容则不需要-u参数省略
 git clone git@github.com:yourName/yourRepository.git --从远程库克隆最新版本到本地工作区
 
 git branch --查看分支
-git branch branchname --创建分支
-git checkout branchname --切换分支
-git checkout -b branchname  --创建并切换分支加-b参数
-git merge branchname --把分支合并到master主分支上
-git branch -d branchname --删除分支
+git branch <branch_name> --创建分支
+git checkout <branch_name> --切换分支
+git checkout -b <branch_name>  --创建并切换分支加-b参数
+git merge <branch_name> --把分支合并到master主分支上
+git branch -d <branch_name> --删除分支
 
 在实际开发中，我们应该按照几个基本原则进行分支管理：
 1. master分支应该是非常稳定的，也就是仅用来发布新版本，平时不能在上面干活；
@@ -54,13 +54,15 @@ git stash pop --恢复暂存的分支继续工作
 
 --feature branch
 1. 开发一个新feature，最好新建一个分支；
-2. 如果要丢弃一个没有被合并过的分支，可以通过git branch -D branchname强行删除。
+2. 如果要丢弃一个没有被合并过的分支，可以通过git branch -D <branch_name>强行删除。
 
 --remote origin
 git remote -v --查看远程库的信息
+git remote add origin git@github.com:yourName/learngit.git --关联远程库
+git remote rm origin --删除关联远程库
 
 推送分支，就是把该分支上的所有本地提交推送到远程库。推送时要指定本地分支，这样Git就会把该分支推送到远程库对应的远程分支上：
-git push origin branchname --向远程服务器推送分支
+git push origin <branch_name> --向远程服务器推送分支
    
 并不是一定要把本地分支往远程推送，那么，哪些分支需要推送，哪些不需要呢？
 1. master分支是主分支，因此要时刻与远程同步；
@@ -78,8 +80,21 @@ git checkout -b <branch-name> origin/<branch-name>
 2. 如果推送失败，则因为远程分支比你的本地更新，需要先用git pull试图合并；
 3. 如果git pull提示no tracking information，则说明本地分支和远程分支的链接关系没有创建，用命令git branch --set-upstream-to <branch-name> origin/<branch-name>。
 4. 再进行git pull 如果合并有冲突，则解决冲突，并在本地提交；
-5. 没有冲突或者解决掉冲突后，再用git push origin branchname推送就能成功！
+5. 没有冲突或者解决掉冲突后，再用git push origin <branch_name>推送就能成功！
 这就是多人协作的工作模式，一旦熟悉了，就非常简单。
+
+--tag
+git tag <tag_name>  --为当前提交创建版本号
+git tag <tag_name> commit_id --根据以前提交的ID号创建版本号
+git tag --查看所有版本号
+git show <tag_name> --查看版本号文件的具体内容
+
+git push origin <tagname> --把版本号推送到远程库
+git push origin --tags --把所有版本号推送到远程库
+
+git tab -d <tag_name> --删除本地版本号
+git push origin :refs/tags/<tagname> --删除远程库中的一个版本号
+
 
 
 
