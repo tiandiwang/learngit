@@ -40,7 +40,8 @@ git checkout -b branchname  --创建并切换分支加-b参数
 git merge branchname --把分支合并到master主分支上
 git branch -d branchname --删除分支
 
-create a new branch quick and simple.
+create a new branch (quick and simple) or (quick & simple).
+
 
 
 
