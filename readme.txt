@@ -52,6 +52,10 @@ git stash --暂存当前未提交的分支工作内容
 git stash list --查看已暂存的分支
 git stash pop --恢复暂存的分支继续工作
 
+--feature branch
+1. 开发一个新feature，最好新建一个分支；
+2. 如果要丢弃一个没有被合并过的分支，可以通过git branch -D branchname强行删除。
+
 
 
 
