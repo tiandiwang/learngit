@@ -96,6 +96,8 @@ git push origin --tags --把所有版本号推送到远程库
 git tab -d <tag_name> --删除本地版本号
 git push origin :refs/tags/<tagname> --删除远程库中的一个版本号
 
+exit --退出Git
+
 
 
 
