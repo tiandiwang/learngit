@@ -1,3 +1,4 @@
+在开始菜单里找到“Git”->“Git Bash”启动Git命令行窗口
 
 git config --global user.name "your name" --设置Git全局用户名
 git config --global user.email "your email" --设置Git全局邮箱
